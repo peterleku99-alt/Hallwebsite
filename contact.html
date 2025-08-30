@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - The Grand Elm</title>
+    <meta name="description" content="Get in touch with The Grand Elm to start planning your perfect event. Contact us for venue tours, pricing, and availability.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1>The Grand Elm</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="venue.html">The Venue</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="catering.html">Catering</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Ready to start planning your perfect event? Get in touch with us today.</p>
+        </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="contact-info">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Address</h3>
+                    <p>123 Grand Elm Lane<br>Historic District, ST 12345</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone</h3>
+                    <p>(555) 123-4567</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>info@grandelm.com</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Office Hours</h3>
+                    <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: By appointment only</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form">
+        <div class="container">
+            <div class="form-container">
+                <h2>Send Us a Message</h2>
+                <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+                
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="eventType">Event Type *</label>
+                            <select id="eventType" name="eventType" required>
+                                <option value="">Select an event type</option>
+                                <option value="wedding">Wedding</option>
+                                <option value="corporate">Corporate Event</option>
+                                <option value="social">Social Event</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="proposedDate">Proposed Date</label>
+                            <input type="date" id="proposedDate" name="proposedDate">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="guestCount">Number of Guests</label>
+                            <input type="number" id="guestCount" name="guestCount" min="1" max="300">
+                        </div>
+                        <div class="form-group">
+                            <label for="budget">Budget Range</label>
+                            <select id="budget" name="budget">
+                                <option value="">Select budget range</option>
+                                <option value="under-5000">Under $5,000</option>
+                                <option value="5000-10000">$5,000 - $10,000</option>
+                                <option value="10000-20000">$10,000 - $20,000</option>
+                                <option value="over-20000">Over $20,000</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell us about your event vision, special requirements, or any questions you may have..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="cta-button">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2>Find Us</h2>
+            <div class="map-container">
+                <!-- Google Maps Embed: Interactive map showing The Grand Elm location at 123 Grand Elm Lane, Historic District -->
+                <div class="map-placeholder">
+                    <i class="fas fa-map"></i>
+                    <h3>Interactive Map</h3>
+                    <p>Google Maps integration showing our location</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>What is the maximum capacity of your venue?</h3>
+                    <p>Our grand ballroom can accommodate up to 200 guests for a seated dinner, and up to 300 for a cocktail-style reception. For outdoor events, our gardens can host up to 250 guests.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Is there on-site parking available?</h3>
+                    <p>Yes, we offer complimentary on-site parking for up to 150 vehicles. We also provide valet parking services for special events and can arrange shuttle services from nearby hotels if needed.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Can we use our own vendors?</h3>
+                    <p>We have a preferred vendor list that we're happy to share, but you're welcome to bring in your own vendors. We just ask that they provide proof of insurance and meet our venue requirements.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Do you offer all-inclusive packages?</h3>
+                    <p>Yes, we offer several all-inclusive packages that include venue rental, catering, basic decor, and event coordination. We can also create custom packages tailored to your specific needs and budget.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>What is your cancellation policy?</h3>
+                    <p>We understand that circumstances can change. Our cancellation policy allows for full refunds up to 90 days before your event, with partial refunds available up to 30 days before. We're always happy to work with you to reschedule if possible.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Do you offer tours of the venue?</h3>
+                    <p>Absolutely! We encourage all potential clients to visit The Grand Elm in person. We offer tours by appointment during our office hours, and we're happy to accommodate evening and weekend tours for special circumstances.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>The Grand Elm</h3>
+                    <p>Where Moments Become Memories</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>123 Grand Elm Lane<br>Historic District, ST 12345</p>
+                    <p>Phone: (555) 123-4567<br>Email: info@grandelm.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 The Grand Elm. All rights reserved. | <a href="#">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

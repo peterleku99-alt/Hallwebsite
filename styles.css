@@ -1,0 +1,1106 @@
+/* The Grand Elm - Main Stylesheet */
+
+/* CSS Variables */
+:root {
+    --color-cream: #f8f6f1;
+    --color-taupe: #8b7355;
+    --color-forest-green: #2d5016;
+    --color-gold: #d4af37;
+    --color-dark: #2c2c2c;
+    --color-light: #ffffff;
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'Lato', sans-serif;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--color-dark);
+    background-color: var(--color-light);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: 3.5rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 2rem; }
+h4 { font-size: 1.5rem; }
+
+p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* Header */
+.header {
+    background-color: var(--color-light);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo h1 {
+    font-family: var(--font-heading);
+    color: var(--color-forest-green);
+    font-size: 2rem;
+    margin: 0;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--color-dark);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--color-gold);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-dark);
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-light);
+    margin-top: 80px;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.hero-title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-gold);
+    color: var(--color-light);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    background-color: #b8941f;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Introduction Section */
+.introduction {
+    padding: 5rem 0;
+    background-color: var(--color-cream);
+}
+
+.intro-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.intro-content h2 {
+    color: var(--color-forest-green);
+    margin-bottom: 2rem;
+}
+
+/* Features Section */
+.features {
+    padding: 5rem 0;
+    background-color: var(--color-light);
+}
+
+.features h2 {
+    text-align: center;
+    color: var(--color-forest-green);
+    margin-bottom: 3rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--color-cream);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: var(--color-gold);
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    color: var(--color-forest-green);
+    margin-bottom: 1rem;
+}
+
+/* Testimonial Teaser */
+.testimonial-teaser {
+    padding: 5rem 0;
+    background-color: var(--color-forest-green);
+    color: var(--color-light);
+}
+
+.testimonial-teaser blockquote {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial-teaser p {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.testimonial-teaser cite {
+    font-size: 1.1rem;
+    color: var(--color-gold);
+}
+
+/* Final CTA Section */
+.final-cta {
+    padding: 5rem 0;
+    background-color: var(--color-cream);
+    text-align: center;
+}
+
+.final-cta h2 {
+    color: var(--color-forest-green);
+    margin-bottom: 1rem;
+}
+
+.final-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3,
+.footer-section h4 {
+    color: var(--color-gold);
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: var(--color-light);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--color-gold);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-taupe);
+}
+
+.footer-bottom a {
+    color: var(--color-gold);
+    color: var(--color-gold);
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .nav-container {
+        padding: 1rem;
+    }
+}
+
+/* Additional Page Styles */
+
+/* Page Header */
+.page-header {
+    background-color: var(--color-forest-green);
+    color: var(--color-light);
+    text-align: center;
+    padding: 8rem 0 4rem;
+    margin-top: 80px;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* About Page Styles */
+.our-story {
+    padding: 5rem 0;
+    background-color: var(--color-light);
+}
+
+.story-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.story-text h2 {
+    color: var(--color-forest-green);
+    margin-bottom: 2rem;
+}
+
+.story-image {
+    height: 400px;
+    background-color: var(--color-cream);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-taupe);
+    font-style: italic;
+}
+
+.philosophy {
+    padding: 5rem 0;
+    background-color: var(--color-cream);
+}
+
+.philosophy-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.philosophy-content h2 {
+    color: var(--color-forest-green);
+    margin-bottom: 2rem;
+}
+
+.team {
+    padding: 5rem 0;
+    background-color: var(--color-light);
+}
+
+.team h2 {
+    text-align: center;
+    color: var(--color-forest-green);
+    margin-bottom: 3rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.team-member {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--color-cream);
+    border-radius: 10px;
+}
+
+.member-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: var(--color-taupe);
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-light);
+    font-style: italic;
+}
+
+.team-member h3 {
+    color: var(--color-forest-green);
+    margin-bottom: 0.5rem;
+}
+
+.team-member h4 {
+    color: var(--color-gold);
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+/* Venue Page Styles */
+.virtual-tour {
+    padding: 5rem 0;
+    background-color: var(--color-cream);
+    text-align: center;
+}
+
+.virtual-tour h2 {
+    color: var(--color-forest-green);
+    margin-bottom: 1rem;
+}
+
+.tour-embed {
+    margin-top: 2rem;
+}
+
+.tour-placeholder {
+    height: 400px;
+    background-color: var(--color-light);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-taupe);
+    font-style: italic;
+}
+
+.tour-placeholder i {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--color-gold);
+}
+
+.gallery {
+    padding: 5rem 0;
+    background-color: var(--color-light);
+}
+
+.gallery h2 {
+    text-align: center;
+    color: var(--color-forest-green);
+    margin-bottom: 3rem;
+}
+
+.gallery-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.tab-button {
+    padding: 1rem 2rem;
+    background-color: var(--color-cream);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.tab-button:hover,
+.tab-button.active {
+    background-color: var(--color-gold);
+    color: var(--color-light);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.gallery-item {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--color-cream);
+    border-radius: 10px;
+}
+
+.image-placeholder {
+    height: 250px;
+    background-color: var(--color-taupe);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-light);
+    font-style: italic;
+}
+
+.gallery-item h3 {
+    color: var(--color-forest-green);
+    margin-bottom: 0.5rem;
+}
+
+/* Events Page Styles */
+.event-types {
+    padding: 5rem 0;
+    background-color: var(--color-light);
+}
+
+.event-types h2 {
+    text-align: center;
+    color: var(--color-forest-green);
+    margin-bottom: 3rem;
+}
+
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.event-card {
+    padding: 2rem;
+    background-color: var(--color-cream);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.event-icon {
+    font-size: 3rem;
+    color: var(--color-gold);
+    margin-bottom: 1rem;
+}
+
+.event-card h3 {
+    color: var(--color-forest-green);
+    margin-bottom: 1rem;
+}
+
+.event-card ul {
+    text-align: left;
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.event-card li {
+    margin-bottom: 0.5rem;
+}
+
+.packages {
+    padding: 5rem 0;
+    background-color: var(--color-cream);
+}
+
+.packages h2 {
+    text-align: center;
+    color: var(--color-forest-green);
+    margin-bottom: 1rem;
+}
+
+.packages > .container > p {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.package-card {
+    padding: 2rem;
+    background-color: var(--color-light);
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.package-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.package-card.featured {
+    border-color: var(--color-gold);
+    transform: scale(1.05);
+}
+
+.featured-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-gold);
+    color: var(--color-light);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.package-price {
+    font-size: 1.5rem;
+    color: var(--color-gold);
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+.package-card ul {
+    text-align: left;
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.package-card li {
+    margin-bottom: 0.5rem;
+}
+
+.custom-package {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--color-light);
+    border-radius: 10px;
+}
+
+.custom-package h3 {
+    color: var(--color-forest-green);
+    margin-bottom: 1rem;
+}
+
+/* Catering Page Styles */
+.catering-philosophy {
+    padding: 5rem 0;
+    background-color: var(--color-cream);
+}
+
+.philosophy-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.philosophy-content h2 {
+    color: var(--color-forest-green);
+    margin-bottom: 2rem;
+}
+
+.sample-menus {
+    padding: 5rem 0;
+    background-color: var(--color-light);
+}
+
+.sample-menus h2 {
+    text-align: center;
+    color: var(--color-forest-green);
+    margin-bottom: 1rem;
+}
+
+.sample-menus > .container > p {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.menu-card {
+    padding: 2rem;
+    background-color: var(--color-cream);
+    border-radius: 10px;
+}
+
+.menu-card h3 {
+    color: var(--color-forest-green);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.menu-description {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    color: var(--color-taupe);
+}
+
+.menu-highlights h4 {
+    color: var(--color-forest-green);
+    margin-bottom: 1rem;
+}
+
+.menu-highlights ul {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+}
+
+.menu-highlights li {
+    margin-bottom: 0.5rem;
+}
+
+.menu-note {
+    text-align: center;
+    font-style: italic;
+    color: var(--color-gold);
+    font-weight: 600;
+}
+
+.dietary-accommodations {
+    padding: 5rem 0;
+    background-color: var(--color-cream);
+}
+
+.dietary-accommodations h2 {
+    text-align: center;
+    color: var(--color-forest-green);
+    margin-bottom: 2rem;
+}
+
+.dietary-accommodations > .container > p {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.accommodations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.accommodation-item {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--color-light);
+    border-radius: 10px;
+}
+
+.accommodation-item i {
+    font-size: 3rem;
+    color: var(--color-gold);
+    margin-bottom: 1rem;
+}
+
+.accommodation-item h3 {
+    color: var(--color-forest-green);
+    margin-bottom: 1rem;
+}
+
+.accommodation-note {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--color-light);
+    border-radius: 10px;
+}
+
+/* Testimonials Page Styles */
+.testimonials {
+    padding: 5rem 0;
+    background-color: var(--color-light);
+}
+
+.testimonials h2 {
+    text-align: center;
+    color: var(--color-forest-green);
+    margin-bottom: 3rem;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial-card {
+    padding: 2rem;
+    background-color: var(--color-cream);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.stars {
+    color: var(--color-gold);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial-card blockquote {
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-card blockquote p {
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.testimonial-author h4 {
+    color: var(--color-forest-green);
+    margin-bottom: 0.25rem;
+}
+
+.testimonial-author p {
+    color: var(--color-taupe);
+    font-style: italic;
+    margin: 0;
+}
+
+.testimonial-cta {
+    padding: 5rem 0;
+    background-color: var(--color-forest-green);
+    color: var(--color-light);
+    text-align: center;
+}
+
+.testimonial-cta h2 {
+    margin-bottom: 1rem;
+}
+
+.testimonial-cta p {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+/* Contact Page Styles */
+.contact-info {
+    padding: 5rem 0;
+    background-color: var(--color-cream);
+}
+
+.contact-info h2 {
+    text-align: center;
+    color: var(--color-forest-green);
+    margin-bottom: 3rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.contact-card {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--color-light);
+    border-radius: 10px;
+}
+
+.contact-card i {
+    font-size: 3rem;
+    color: var(--color-gold);
+    margin-bottom: 1rem;
+}
+
+.contact-card h3 {
+    color: var(--color-forest-green);
+    margin-bottom: 1rem;
+}
+
+.contact-form {
+    padding: 5rem 0;
+    background-color: var(--color-light);
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-container h2 {
+    text-align: center;
+    color: var(--color-forest-green);
+    margin-bottom: 1rem;
+}
+
+.form-container > p {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--color-forest-green);
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid var(--color-cream);
+    border-radius: 5px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-gold);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.map-section {
+    padding: 5rem 0;
+    background-color: var(--color-cream);
+}
+
+.map-section h2 {
+    text-align: center;
+    color: var(--color-forest-green);
+    margin-bottom: 3rem;
+}
+
+.map-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.map-placeholder {
+    height: 400px;
+    background-color: var(--color-light);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-taupe);
+    font-style: italic;
+}
+
+.map-placeholder i {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--color-gold);
+}
+
+.faq-section {
+    padding: 5rem 0;
+    background-color: var(--color-light);
+}
+
+.faq-section h2 {
+    text-align: center;
+    color: var(--color-forest-green);
+    margin-bottom: 3rem;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.faq-item {
+    padding: 2rem;
+    background-color: var(--color-cream);
+    border-radius: 10px;
+}
+
+.faq-item h3 {
+    color: var(--color-forest-green);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design for Additional Pages */
+@media (max-width: 768px) {
+    .story-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .gallery-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .tab-button {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .testimonials-grid,
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .package-grid {
+        grid-template-columns: 1fr;
+    }
+}
