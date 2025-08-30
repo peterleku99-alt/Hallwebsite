@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Venue - The Grand Elm</title>
+    <meta name="description" content="Explore our elegant spaces, from the grand ballroom to picturesque gardens. Take a virtual tour of The Grand Elm.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1>The Grand Elm</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="venue.html">The Venue</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="catering.html">Catering</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>The Venue</h1>
+            <p>Discover our elegant spaces designed to create the perfect backdrop for your special moments.</p>
+        </div>
+    </section>
+
+    <!-- Virtual Tour Section -->
+    <section class="virtual-tour">
+        <div class="container">
+            <h2>Experience The Grand Elm Virtually</h2>
+            <p>Take a 360° virtual tour of our venue to explore every space and get a true feel for the atmosphere.</p>
+            <div class="tour-embed">
+                <!-- Virtual Tour Embed: 360° interactive tour of the entire venue, allowing users to navigate through all spaces -->
+                <div class="tour-placeholder">
+                    <i class="fas fa-vr-cardboard"></i>
+                    <h3>360° Virtual Tour</h3>
+                    <p>Click to explore our venue in immersive detail</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <div class="container">
+            <h2>Photo Gallery</h2>
+            <div class="gallery-tabs">
+                <button class="tab-button active" data-tab="ceremony">Ceremony Spaces</button>
+                <button class="tab-button" data-tab="reception">Reception Hall</button>
+                <button class="tab-button" data-tab="suites">Getting Ready Suites</button>
+                <button class="tab-button" data-tab="details">Details</button>
+            </div>
+            
+            <div class="gallery-content">
+                <!-- Ceremony Spaces Tab -->
+                <div class="tab-content active" id="ceremony">
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <div class="image-placeholder">
+                                <!-- Image Description: Sunset views in the garden pergola - A romantic outdoor ceremony setup with a beautiful pergola draped in flowing white fabric, surrounded by lush gardens, with golden hour lighting creating a warm, magical atmosphere -->
+                            </div>
+                            <h3>Garden Pergola</h3>
+                            <p>Perfect for intimate outdoor ceremonies with stunning sunset views</p>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="image-placeholder">
+                                <!-- Image Description: The elegant fireplace mantel ceremony setup - An indoor ceremony space featuring a grand stone fireplace as the focal point, decorated with elegant floral arrangements and candles, creating a cozy and romantic atmosphere -->
+                            </div>
+                            <h3>Fireplace Mantel</h3>
+                            <p>Cozy indoor ceremonies with our historic fireplace as the centerpiece</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reception Hall Tab -->
+                <div class="tab-content" id="reception">
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <div class="image-placeholder">
+                                <!-- Image Description: The grand ballroom with crystal chandeliers - A magnificent ballroom featuring soaring ceilings, multiple crystal chandeliers, floor-to-ceiling windows, and elegant architectural details, shown during the day with natural light streaming in -->
+                            </div>
+                            <h3>Grand Ballroom</h3>
+                            <p>Our signature space featuring crystal chandeliers and soaring ceilings</p>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="image-placeholder">
+                                <!-- Image Description: Evening reception with uplighting and dance floor - The same ballroom transformed for evening events, with dramatic uplighting, a spacious dance floor, and elegant table settings, creating a sophisticated party atmosphere -->
+                            </div>
+                            <h3>Evening Reception</h3>
+                            <p>Transform our ballroom into an elegant evening celebration space</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Getting Ready Suites Tab -->
+                <div class="tab-content" id="suites">
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <div class="image-placeholder">
+                                <!-- Image Description: The bright and spacious bridal suite - A luxurious bridal suite with large windows, comfortable seating areas, full-length mirrors, and elegant decor, perfect for wedding day preparations -->
+                            </div>
+                            <h3>Bridal Suite</h3>
+                            <p>Spacious and bright suite perfect for wedding day preparations</p>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="image-placeholder">
+                                <!-- Image Description: The modern groom's lounge - A sophisticated groom's lounge with leather seating, a bar area, and modern amenities, designed for comfort and style -->
+                            </div>
+                            <h3>Groom's Lounge</h3>
+                            <p>Modern and comfortable space for the groom and groomsmen</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Details Tab -->
+                <div class="tab-content" id="details">
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <div class="image-placeholder">
+                                <!-- Image Description: Close-up of table settings and floral centerpieces - Detailed shots of elegant table settings featuring fine china, crystal glassware, and stunning floral centerpieces with seasonal blooms -->
+                            </div>
+                            <h3>Table Settings</h3>
+                            <p>Elegant table arrangements with fine china and stunning centerpieces</p>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="image-placeholder">
+                                <!-- Image Description: The vintage-inspired bar area - A beautifully designed bar area with vintage-inspired decor, featuring a marble countertop, brass fixtures, and elegant lighting -->
+                            </div>
+                            <h3>Vintage Bar</h3>
+                            <p>Our vintage-inspired bar area adds character to any celebration</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>The Grand Elm</h3>
+                    <p>Where Moments Become Memories</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>123 Grand Elm Lane<br>Historic District, ST 12345</p>
+                    <p>Phone: (555) 123-4567<br>Email: info@grandelm.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 The Grand Elm. All rights reserved. | <a href="#">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
